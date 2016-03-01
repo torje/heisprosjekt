@@ -8,6 +8,7 @@
 
 // Number of floors
 #define N_FLOORS 4
+#define N_BUTTONS 3
 
 
 
@@ -18,6 +19,8 @@
 int elev_init(void);
 
 
+extern const int lamp_channel_matrix[N_FLOORS][N_BUTTONS];
+extern const int button_channel_matrix[N_FLOORS][N_BUTTONS];
 
 /**
   Motor direction for function elev_set_motor_direction().
