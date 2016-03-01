@@ -8,5 +8,6 @@ struct Buttons{
 	int limit;
 };
 
+int buttons_update( struct Buttons * buttons);
 void Buttons_init ( struct Buttons * buttons, elev_button_type_t type, int start, int limit);
 void sweepButtons( struct Buttons *buttons);
