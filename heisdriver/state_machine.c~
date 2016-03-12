@@ -37,8 +37,8 @@ int queue_next( int queue[4] , int start, int limit, int step){
   /*printf("(%d,%d,%d)[ ", start, limit, step);
   for( int i = start; i != limit; i+=step){
     printf("%d ", queue[i]);
-  }
-  printf("]\n");*/
+  }*/
+  printf("]\n");
   for( int i = start; i != limit; i+=step){
     if ( queue[i] ){
       return i;

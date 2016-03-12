@@ -1,7 +1,7 @@
 struct Elevator{
 	int position;
         //double position;
-        double position_estimate;
+        //double position_estimate;
 	int position_known;
 	int state;
 	int next;

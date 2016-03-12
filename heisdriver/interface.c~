@@ -19,9 +19,9 @@ int buttons_update( struct Buttons * buttons){
 	}
 	if ( equal == 0 ){
 		for  ( int i = 0 ; i < 4 ; i++){
-			//printf("%i ", buttons_tmp.floor[i]);
+			printf("%i ", buttons_tmp.floor[i]);
 		}
-		//printf("\n");
+		printf("\n");
 		*buttons =buttons_tmp;
 		return 1;
 	}

@@ -2,7 +2,7 @@
 struct RequestManager{
 	int super_state;
 	int runstate;
-	int up_queue[4];
+	int up_queue[4] = {};
 	int down_queue[4];
 	int direction;
 	int next_floor;

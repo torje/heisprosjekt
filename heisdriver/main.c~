@@ -43,12 +43,13 @@ int main() {
 		// Sweeps start
 		//sweepButtons();	
 		request_manager_update( &rm);
-		Elevator_do(&ele);
+		int floor = sweepSensors();
 		// sweeps end
 		ele.next = requestManager_next(&rm);
 		/*if ( ele.position_known==1){
 		        ele.state = RUN;
 		}*/
+        	Elevator_do(&ele);
         	
         	
         	

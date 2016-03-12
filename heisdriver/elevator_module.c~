@@ -25,11 +25,11 @@ int Elevator_check_floor(){
 void Elevator_do(struct Elevator * ele){
 	switch( ele->state ) {
 		case HALT:
-		        //printf("halting\n");
+		        printf("halting\n");
 		        elev_set_motor_direction(DIRN_STOP);
 			break;
 		case SEEK:
-		        //printf("seeking\n");
+		        printf("seeking\n");
 		        if ( ele->position_known == 0 ){
 		                int floorSense;
 		                if (-1 != (floorSense = Elevator_check_floor())){
