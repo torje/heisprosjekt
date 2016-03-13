@@ -52,7 +52,7 @@ int main() {
         	
         	
         	
-        	usleep(100000);
+        	usleep(1000);
         	/*if( floor != -1){
 		        Elevator_do(&ele);
 			ele.position_known = 1;
