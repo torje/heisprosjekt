@@ -39,14 +39,15 @@ void Elevator_do(struct Elevator * ele){
     elev_set_motor_direction(DIRN_STOP);
     break;
   case SEEK:
-     if ( ele->position_known == 0 ){
+    if ( ele->position_known == 0 ){
+      elev_set_motor_direction(DIRN_UP);
       int floorSense;
       if (-1 != (floorSense = Elevator_check_floor())){
 	ele->position = floorSense;
 	ele->position_known = 1;
+	ele->state = HALT;
 	printf("found position\n");
-      }
-      elev_set_motor_direction(DIRN_UP);			
+      }			
     }else{
       elev_set_motor_direction(DIRN_STOP);
     }

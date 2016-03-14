@@ -43,7 +43,7 @@ int main() {
 		request_manager_update( &rm);
 		Elevator_do(&ele);
 		// sweeps end
-		ele.next = requestManager_next(&rm);
+		//ele.next = requestManager_next(&rm);
 		/*if ( ele.position_known==1){
 		        ele.state = RUN;
 		}*/
@@ -83,6 +83,7 @@ int main() {
 			//elev_set_motor_direction(DIRN_UP);
 		}
 
+		// Stop elevator and exit program if the stop button is pressed
 	}
 
 	return 0;

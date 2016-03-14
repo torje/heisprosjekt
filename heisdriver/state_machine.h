@@ -1,7 +1,6 @@
 #include <time.h>
 #include "interface.h"
 struct RequestManager{
-  int super_state;
   int runstate;
   int prev_state;
   int up_queue[4];
@@ -14,10 +13,9 @@ struct RequestManager{
   struct Buttons buttons_elevator;
   struct timespec timer;
   double stop_time;
-  double ease_in_time;
 };
 
-enum Runstate{ RS_STOP, RS_RUN, RS_FLOOR_STOP };
+enum Runstate{ RS_STOP, RS_RUN, RS_FLOOR_STOP, RS_UNKNOWN };
 void request_manager_init( struct RequestManager  *request_manager);
 void request_manager_update( struct RequestManager  *request_manager);
 
@@ -33,4 +31,4 @@ void request_manager_unknown_do_list(  struct RequestManager  *request_manager);
 void request_manager_stop_do_list(  struct RequestManager  *request_manager);
 void request_manager_floor_stop_do_list( struct  RequestManager  *request_manager);
 void request_manager_run_do_list(  struct RequestManager  *request_manager);
-int requestManager_next( struct RequestManager *rm );
+int request_manager_next( struct RequestManager *request_manager ) ;
