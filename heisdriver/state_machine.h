@@ -13,6 +13,8 @@ struct RequestManager{
   struct Buttons buttons_down;
   struct Buttons buttons_elevator;
   struct timespec timer;
+  double stop_time;
+  double ease_in_time;
 };
 
 enum Runstate{ RS_STOP, RS_RUN, RS_FLOOR_STOP };

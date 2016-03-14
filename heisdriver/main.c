@@ -34,9 +34,7 @@ int main() {
 		return 1;
 	}
 	
-	printf("Press STOP button to stop elevator and exit program.\n");
 
-	//elev_set_motor_direction(DIRN_STOP);
 	
 	while ( 1 ) {
 		
@@ -85,11 +83,6 @@ int main() {
 			//elev_set_motor_direction(DIRN_UP);
 		}
 
-		// Stop elevator and exit program if the stop button is pressed
-		if (elev_get_stop_signal()) {
-			elev_set_motor_direction(DIRN_STOP);
-			break;
-		}
 	}
 
 	return 0;
